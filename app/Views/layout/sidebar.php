@@ -28,7 +28,7 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="pelanggan">
+        <a class="nav-link" href="<?= base_url(); ?>/pelanggan">
             <i class="fas fa-fw fa-users"></i>
             <span>Pelanggan</span></a>
     </li>
@@ -62,49 +62,51 @@
             <span>Tipe</span></a>
     </li>
 
-    <!-- Nav Item - Pages Collapse Menu -->
+    <!-- Nav Item - User Management -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-            <i class="fas fa-fw fa-lock"></i>
-            <span>User</span>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser" aria-expanded="true" aria-controls="collapseUser">
+            <i class="fas fa-fw fa-user-shield"></i>
+            <span>User Management</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapseUser" class="collapse" aria-labelledby="headingUser" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Setting : </h6>
-                <a class="collapse-item" href="./login">User</a>
-                <a class="collapse-item" href="./login">Management</a>
-                <a class="collapse-item" href="register.html">Teknisi</a>
-                <a class="collapse-item" href="forgot-password.html">Administrator</a>
+                <h6 class="collapse-header">User Roles:</h6>
+                <a class="collapse-item" href="<?= base_url(); ?>/user">All Users</a>
+                <a class="collapse-item" href="<?= base_url(); ?>/user/admin">Admin</a>
+                <a class="collapse-item" href="<?= base_url(); ?>/user/client">Client</a>
+                <a class="collapse-item" href="<?= base_url(); ?>/user/customer">Customer</a>
             </div>
         </div>
     </li>
 
     <!-- Divider -->
-    <hr class="sidebar-divider d-none d-md-block">
+    <hr class="sidebar-divider">
 
-    <!-- Nav Item - Tipe -->
-    <!-- <li class="nav-item">
-        <a class="nav-link" href="#" data-toggle="modal" data-target="#tambahPulsa">
-            <i class="fas fa-fw fa-credit-card"></i>
-            <span>Isi Pulsa</span>
-        </a>
-    </li> -->
+    <!-- Heading -->
+    <div class="sidebar-heading">
+        Transactions
+    </div>
+
+    <!-- Nav Item - Pulsa -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>/pulsa">
             <i class="fas fa-fw fa-credit-card"></i>
             <span>Pulsa</span></a>
     </li>
     
-    
+    <!-- Nav Item - Riwayat -->
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>/riwayat">
             <i class="fas fa-fw fa-history"></i>
             <span>Riwayat Beli</span></a>
     </li>
 
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
     <!-- Sidebar Toggler (Sidebar) -->
-    <!-- <div class="text-center d-none d-md-inline">
+    <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>
-      </div> -->
+    </div>
 
 </ul>

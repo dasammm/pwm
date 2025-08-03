@@ -34,6 +34,25 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/datalive', 'DataLive::index');
 
+// Authentication Routes
+$routes->get('/login', 'Auth::index');
+$routes->post('/auth/login', 'Auth::login');
+$routes->get('/logout', 'Auth::logout');
+$routes->get('/register', 'Auth::register');
+$routes->post('/auth/saveRegister', 'Auth::saveRegister');
+
+// User Management Routes
+$routes->get('/user', 'User::index');
+$routes->get('/user/create', 'User::create');
+$routes->post('/user/save', 'User::save');
+$routes->get('/user/edit/(:num)', 'User::edit/$1');
+$routes->post('/user/update/(:num)', 'User::update/$1');
+$routes->get('/user/delete/(:num)', 'User::delete/$1');
+$routes->get('/user/admin', 'User::admin');
+$routes->get('/user/client', 'User::client');
+$routes->get('/user/customer', 'User::customer');
+
+// Existing Routes
 $routes->get('/pelanggan', 'Pelanggan::index');
 $routes->get('/profil', 'Profil::index');
 
