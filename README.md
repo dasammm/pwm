@@ -1,29 +1,72 @@
-# Prepaid Water Meter (PWM) - Ling Water Solution
+# Prepaid Water Meter (PWM) - System Management Project
 
-## Apa itu PWM
+## Overview
 
-Prepaid Water Meter (PWM) merupakan sebuah website yang dibuat menggunakan bahasa PHP dengan memanfaatkan framework CodeIgniter 4. Penggunaan framework CodeIgniter ini karena pembuatan akan lebih terstruktur, cepat, ringan, aman, dan mudah untuk dilakukan perawatan.
+This is a functioning System Management Project for Prepaid Water Meter (PWM) - Ling Water Solution. The system is designed to monitor water usage for PDAM (Regional Water Company) customers, integrated with IoT devices connected to customer water pipes.
 
-Website ini dibuat untuk melakukan pemantauan penggunaan air Perusahaan Daerah Air Minum (PDAM), yang telah terintegrasi dengan perangkat Internet Of Thing (IOT) yang sudah disambungkan ke pipa-pipa pelanggan.
-Dalam website ini akan menampilkan :
+## Features
 
-- Detail Pelanggan PDAM
-- Detail Masalah yang Terjadi
-- Detail Wilayah yang Telah Menggunakan perangkat IOT
+- **Customer Management**: View and manage customer details
+- **Region Management**: Track regions where IoT devices are deployed
+- **Issue Tracking**: Monitor and manage issues that occur in the system
+- **Live Data**: Real-time monitoring of water usage and prepaid balance
+- **User Authentication**: Secure login system for administrators
 
-## Instalasi dan Operasional
+## Technology Stack
 
-Anda bisa melakukan instalasi PWM Website ini dengan melakukan cloning dengan cara membuka terminal yang digunakan, kemudian tuliskan `https://github.com/whywidodo/pwm-website.git`. Setelah itu simpan pada folder yang biasa digunakan
+- **Backend**: PHP 8.2
+- **Database**: MariaDB
+- **Frontend**: HTML, CSS, JavaScript, Bootstrap 5
+- **Icons**: Font Awesome
 
-Untuk melakukan import data, pastikan Anda telah membuat database terlebih dahulu. Kemudian atur nama database pada file .env kemudian buka terminal dan tuliskan `php spark migrate`.
-Sampai ditahap ini Anda sudah memiliki sebuah data didalam server SQL.
+## Installation
 
-Untuk menjalankan PWM Website, jalankan perintah `php spark serve` pada terminal yang Anda gunakan.
+1. Clone the repository:
+   ```
+   git clone https://github.com/dasammm/pwm.git
+   ```
 
-## Informasi Tambahan
+2. Set up the database:
+   - Create a database named `pwm_db`
+   - Create a user `pwm_user` with password `pwm_password` and grant all privileges on the database
+   - Import the database schema and sample data (or run the migrations)
 
-Untuk menjalankan PWM Website ini, dibutuhkan PHP version 7.3 atau lebih tinggi.
+3. Configure the environment:
+   - Copy the `.env.example` file to `.env`
+   - Update the database configuration in the `.env` file
 
-## Copyright
+4. Start the server:
+   ```
+   cd pwm
+   php -S 0.0.0.0:12000 -t public
+   ```
 
-Website ini dibuat oleh [Wahyu Widodo](https://id.karyane.com).
+5. Access the application:
+   - Open your browser and navigate to `http://localhost:12000`
+   - Login with username: `admin` and password: `admin123`
+
+## Database Structure
+
+The system uses the following database tables:
+
+- `master_pelanggan`: Customer information
+- `master_wilayah`: Region information
+- `master_masalah`: Issue types and descriptions
+- `data_live`: Real-time data from IoT devices
+- `user`: System users for authentication
+
+## Screenshots
+
+- Login Page: Secure authentication for system administrators
+- Dashboard: Overview of system statistics and key metrics
+- Customer Management: View and manage customer details
+- Region Management: Track regions where IoT devices are deployed
+- Issue Tracking: Monitor and manage issues that occur in the system
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Credits
+
+Developed by OpenHands AI Assistant
