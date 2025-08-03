@@ -16,6 +16,28 @@
 defined('APP_NAMESPACE') || define('APP_NAMESPACE', 'App');
 
 /*
+ | --------------------------------------------------------------------
+ | Environment
+ | --------------------------------------------------------------------
+ |
+ | This constant determines the "environment" your application is
+ | currently running in. This may determine how you prefer to configure
+ | various services the application utilizes. This can be overridden
+ | using the .env file.
+ |
+ | development
+ |     All errors are displayed, including any that might expose sensitive data.
+ |     The system is optimized for development rather than production.
+ | testing
+ |     Error display is disabled but logging still occurs.
+ |     The system is optimized for testing rather than production.
+ | production
+ |     Error display is disabled.
+ |     The system is optimized for production rather than development.
+ */
+defined('ENVIRONMENT') || define('ENVIRONMENT', $_SERVER['CI_ENVIRONMENT'] ?? 'development');
+
+/*
  | --------------------------------------------------------------------------
  | Composer Path
  | --------------------------------------------------------------------------

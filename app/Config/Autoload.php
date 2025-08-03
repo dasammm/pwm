@@ -63,4 +63,27 @@ class Autoload extends AutoloadConfig
 	 * @var array<string, string>
 	 */
 	public $classmap = [];
+
+	/**
+	 * -------------------------------------------------------------------
+	 * Files
+	 * -------------------------------------------------------------------
+	 * The files array provides a list of paths to __non-class__ files
+	 * that will be autoloaded. This is most useful for configuration
+	 * files that are needed throughout the application.
+	 *
+	 * @var array<int, string>
+	 */
+	public $files = [];
+
+	/**
+	 * -------------------------------------------------------------------
+	 * Helpers
+	 * -------------------------------------------------------------------
+	 * Prototype:
+	 *   $helpers = ['form', 'url', 'file'];
+	 *
+	 * @var array<int, string>
+	 */
+	public $helpers = [];
 }

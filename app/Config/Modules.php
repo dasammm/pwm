@@ -50,4 +50,15 @@ class Modules extends BaseModules
 		'routes',
 		'services',
 	];
+
+	/**
+	 * --------------------------------------------------------------------------
+	 * Composer Package Paths
+	 * --------------------------------------------------------------------------
+	 *
+	 * Composer package paths for auto-discovery to use.
+	 *
+	 * @var string[]
+	 */
+	public $composerPackages = [];
 }
